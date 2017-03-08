@@ -1,4 +1,3 @@
-
 # CUSTOM .GITIGNORE FILE BASED ON github/gitignore TEMPLATES
 
 # Original .gitignore templates obtained from: https://github.com/github/gitignore
@@ -118,8 +117,8 @@ node
 
 # Typescript
 .tscache
-client/src/app/**/*.js
-client/src/app/**/*.js.map
+js/**/*.js
+js/**/*.js.map
 
 # e2e
 client/e2e/*.js
