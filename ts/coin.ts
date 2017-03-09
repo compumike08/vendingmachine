@@ -31,3 +31,12 @@ class Half extends Coin {
         return "img/Half.png";
     };
 }
+
+class Dollar extends Coin {
+    constructor() {
+        super(1);
+    };
+    getImageUrl(): string {
+        return "img/Dollar.jpg";
+    };
+}
