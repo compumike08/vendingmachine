@@ -1,5 +1,5 @@
-class Coin {
-
+abstract class Coin {
+    abstract getImageUrl(): string
 }
 
 class Quarter extends Coin {
