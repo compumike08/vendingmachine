@@ -2,6 +2,12 @@
 /// <reference path="./product.ts" />
 
 
+enum VendingMachineSize {
+    small = 6,
+    medium = 9,
+    large = 12
+}
+
 class Cell {
     constructor (public product: CocaCola) {}
     stock = ko.observable(3);
