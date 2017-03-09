@@ -1,6 +1,6 @@
 /// <reference path="./coin.ts" />
 /// <reference path="./product.ts" />
-
+/// <reference path="./productFactory.ts" />
 
 enum VendingMachineSize {
     small = 6,
@@ -15,8 +15,19 @@ class Cell {
 }
 
 class VendingMachine {
-    private paid: KnockoutObservable<number> = ko.observable(0);
+    paid: KnockoutObservable<number> = ko.observable(0);
+    cells: KnockoutObservableArray<Cell> = ko.observableArray([]);
     acceptedCoins: Quarter[] = [new Quarter()];
+
+    set size(givenSize: VendingMachineSize) {
+        this.cells([]);
+
+        for (let index = 0; index < givenSize; index++) {
+            let product = ProductFactory.GetProduct();
+            this.cells.push(new Cell(product));
+        }
+    }
+
     acceptCoin = (coin: Quarter): void => {
         let oldTotal = this.paid();
         this.paid(oldTotal + coin.Value);
