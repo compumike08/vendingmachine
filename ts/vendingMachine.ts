@@ -16,6 +16,7 @@ class Cell {
 
 class VendingMachine {
     paid: KnockoutObservable<number> = ko.observable(0);
+    selectedCell: KnockoutObservable<Cell> = ko.observable(new Cell(new CocaCola));
     cells: KnockoutObservableArray<Cell> = ko.observableArray([]);
     acceptedCoins: Quarter[] = [new Quarter()];
 
@@ -26,6 +27,11 @@ class VendingMachine {
             let product = ProductFactory.GetProduct();
             this.cells.push(new Cell(product));
         }
+    }
+
+    select = (cell: Cell): void => {
+        cell.sold(false);
+        this.selectedCell(cell);
     }
 
     acceptCoin = (coin: Quarter): void => {
