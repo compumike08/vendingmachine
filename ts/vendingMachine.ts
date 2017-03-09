@@ -37,8 +37,9 @@ class VendingMachine {
     }
 
     acceptCoin = (coin: Quarter): void => {
-        let oldTotal = this.paid();
-        this.paid(oldTotal + coin.Value);
+        let oldTotal = new Big(this.paid());
+        let coinValue = new Big(coin.Value);
+        this.paid(parseFloat(oldTotal.plus(coinValue).toString()));
     }
 
     pay = (): void => {
@@ -46,10 +47,10 @@ class VendingMachine {
             alert("I'm sorry, we're out of them!");
             return;
         }
-        let currentPaid = this.paid();
-        // Use rounding trick to compensate for floating point value rounding differences
-        this.paid(Math.round(((currentPaid - this.selectedCell().product.price)*100))/100);
+        let currentPaid = new Big(this.paid());
+        let productPrice = new Big(this.selectedCell().product.price);
         let currentStock = this.selectedCell().stock();
+        this.paid(parseFloat(currentPaid.minus(productPrice).toString()));
         this.selectedCell().stock(currentStock - 1);
         this.selectedCell().sold(true);
     }
