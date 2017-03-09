@@ -1,0 +1,20 @@
+{
+  "name": "vendingmachine",
+  "version": "0.1.0",
+  "description": "Pluralsight 'A Practical Start with TypeScript' Course Vending Machine Tutorial Application",
+  "main": "bootstrapper.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael-fei/vendingmachine.git"
+  },
+  "author": "michael-fei",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/michael-fei/vendingmachine/issues"
+  },
+  "homepage": "https://github.com/michael-fei/vendingmachine#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "knockout": "^3.4.0"
+  }
+}
