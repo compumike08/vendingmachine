@@ -1,0 +1,19 @@
+{
+  "name": "vendingmachine",
+  "homepage": "https://github.com/michael-fei/vendingmachine",
+  "authors": [
+    "michael-fei"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "NONE",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
