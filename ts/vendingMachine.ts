@@ -1,4 +1,12 @@
 /// <reference path="./coin.ts" />
+/// <reference path="./product.ts" />
+
+
+class Cell {
+    constructor (public product: CocaCola) {}
+    stock = ko.observable(3);
+    sold = ko.observable(false);
+}
 
 class VendingMachine {
     private paid: KnockoutObservable<number> = ko.observable(0);
