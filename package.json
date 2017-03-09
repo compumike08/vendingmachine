@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/michael-fei/vendingmachine#readme",
   "dependencies": {
+    "big.js": "^3.1.3",
     "bootstrap": "^3.3.6",
     "knockout": "^3.4.0"
   },
