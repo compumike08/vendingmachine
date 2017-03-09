@@ -38,7 +38,7 @@ class VendingMachine {
 
     acceptCoin = (coin: Quarter): void => {
         let oldTotal = new Big(this.paid());
-        let coinValue = new Big(coin.Value);
+        let coinValue = new Big(coin.value);
         this.paid(parseFloat(oldTotal.plus(coinValue).toString()));
     }
 
