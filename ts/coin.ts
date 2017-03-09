@@ -1,4 +1,8 @@
-class Quarter {
+class Coin {
+
+}
+
+class Quarter extends Coin {
     private value: number = .25;
     get Value() {
         return this.value;
@@ -11,7 +15,7 @@ class Quarter {
     }
 }
 
-class Dime {
+class Dime extends Coin {
     private value: number = .10;
     get Value() {
         return this.value;
