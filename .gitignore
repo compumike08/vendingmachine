@@ -76,6 +76,10 @@ gradle-app.setting
 .gradletasknamecache
 
 
+# Bower #
+##################################
+bower_components/
+
 # Node #
 ##################################
 
