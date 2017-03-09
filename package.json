@@ -19,6 +19,7 @@
     "knockout": "^3.4.0"
   },
   "devDependencies": {
+    "@types/big.js": "0.0.31",
     "@types/knockout": "^3.4.39"
   }
 }
