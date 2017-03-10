@@ -9,14 +9,14 @@ enum VendingMachineSize {
 }
 
 class Cell {
-    constructor (public product: CocaCola) {}
+    constructor (public product: Product) {}
     stock = ko.observable(3);
     sold = ko.observable(false);
 }
 
 class VendingMachine {
     paid: KnockoutObservable<number> = ko.observable(0);
-    selectedCell: KnockoutObservable<Cell> = ko.observable(new Cell(new CocaCola));
+    selectedCell: KnockoutObservable<Cell> = ko.observable(new Cell(new Initial));
     cells: KnockoutObservableArray<Cell> = ko.observableArray([]);
     acceptedCoins: Coin[] = [new Dime(), new Quarter(), new Half(), new Dollar()];
     canPay: KnockoutComputed<boolean> = ko.pureComputed(() => this.paid() -
