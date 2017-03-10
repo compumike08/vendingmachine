@@ -33,7 +33,7 @@ class CandyCategory extends ProductCategory {
     }
 }
 
-class CandyBarCategoryCategory extends ProductCategory {
+class CandyBarCategory extends ProductCategory {
     name: string = "Candy bar";
     getImageUrl() {
         return this.imgPath + "CandyBar.png";
