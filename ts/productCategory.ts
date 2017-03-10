@@ -11,3 +11,24 @@ class SodaCategory extends ProductCategory {
         return this.imgPath + "SodaCan.png";
     }
 }
+
+class ChipsCategory extends ProductCategory {
+    name: string = "Potato chips";
+    getImageUrl() {
+        return this.imgPath + "Chips.png";
+    }
+}
+
+class CandyCategory extends ProductCategory {
+    name: string = "Candy";
+    getImageUrl() {
+        return this.imgPath + "Candy.png";
+    }
+}
+
+class CandyBarCategoryCategory extends ProductCategory {
+    name: string = "Candy bar";
+    getImageUrl() {
+        return this.imgPath + "CandyBar.png";
+    }
+}
