@@ -1,7 +1,5 @@
 namespace Coins {
 
-    let imgPath: string = "img/";
-
     export abstract class Coin {
         constructor(public value: number) {
             this.value = value;
@@ -14,7 +12,7 @@ namespace Coins {
             super(0.25);
         };
         getImageUrl(): string {
-            return imgPath + "Quarter.png";
+            return "img/Quarter.png";
         };
     }
 
@@ -23,7 +21,7 @@ namespace Coins {
             super(0.10);
         };
         getImageUrl(): string {
-            return imgPath + "Dime.png";
+            return "img/Dime.png";
         };
     }
 
@@ -32,7 +30,7 @@ namespace Coins {
             super(0.5);
         };
         getImageUrl(): string {
-            return imgPath + "Half.png";
+            return "img/Half.png";
         };
     }
 
@@ -41,7 +39,7 @@ namespace Coins {
             super(1);
         };
         getImageUrl(): string {
-            return imgPath + "Dollar.jpg";
+            return "img/Dollar.jpg";
         };
     }
 }
